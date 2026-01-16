@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>ShopLeRunning</title>
-<style>
-body { font-family: Arial; margin:0; background:#f4f4f4; }
-header { background:#000; color:#fff; padding:20px; text-align:center; }
-nav a { color:white; margin:10px; text-decoration:none; }
-section { background:white; margin:20px; padding:20px; border-radius:8px; }
-button { background:black; color:white; padding:10px 20px; border:none; }
-</style>
+  <meta charset="UTF-8">
+  <title>ShopLeRunning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
 <header>
-<h1>ShopLeRunning</h1>
-<nav>
-<a href="#promo">Promos</a>
-<a href="#ensemble">Ensembles</a>
-<a href="#bas">Bas</a>
-</nav>
+  <div id="menu-btn">☰</div>
+  <h1>ShopLeRunning</h1>
+  <a href="#panier" class="panier">🛒</a>
 </header>
 
-<section id="promo">
-<h2>🔥 Promotions</h2>
-<p>Nike Running à prix réduit</p>
+<nav id="menu">
+  <a href="#">Promotions</a>
+  <a href="#">Ensembles</a>
+  <a href="#">Nouveautés</a>
+  <a href="#">Under Armour</a>
+  <a href="#">Nike Running</a>
+</nav>
+
+<section class="products">
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Nike Running Set</h3>
+    <p>89€</p>
+    <button onclick="addToCart('Nike Running Set', 89)">Ajouter</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300">
+    <h3>Under Armour Outfit</h3>
+    <p>79€</p>
+    <button onclick="addToCart('Under Armour Outfit', 79)">Ajouter</button>
+  </div>
 </section>
 
-<section id="ensemble">
-<h2>👕 Ensembles</h2>
-<p>Tenues complètes Nike Running</p>
+<section id="panier">
+  <h2>Panier</h2>
+  <ul id="cart-items"></ul>
+  <p>Total : <span id="total">0</span> €</p>
+  <button onclick="checkout()">Payer</button>
 </section>
 
-<section id="bas">
-<h2>👖 Bas</h2>
-<p>Shorts, leggings, pantalons Nike</p>
-</section>
-
-<section>
-<h2>💳 Paiement</h2>
-<p>Paiement sécurisé via PayPal</p>
-<a href="https://www.paypal.com">
-<button>Payer avec PayPal</button>
-</a>
-</section>
-
-<footer style="text-align:center;padding:20px;">
-© ShopLeRunning
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
