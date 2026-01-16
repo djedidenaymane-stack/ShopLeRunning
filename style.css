@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #000;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+#menu-btn {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.panier {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+}
+
+/* Menu */
+nav {
+  display: none;
+  flex-direction: column;
+  padding: 15px;
+  border-bottom: 1px solid #000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Produits */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  font-size: 14px;
+}
+
+.product p {
+  font-weight: bold;
+}
+
+/* Boutons */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Panier */
+#panier {
+  padding: 20px;
+  border-top: 1px solid #000;
+}
